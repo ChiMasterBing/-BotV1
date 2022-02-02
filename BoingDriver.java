@@ -127,71 +127,9 @@ public class BoingDriver {
                   y = y - dis - 42; 
                   return new point(x, dis + y/2);   
                }
-               /*
-               System.exit(0);
-               
-               if (equal(image[y][x], c2, 1)) {
-                  while (equal(image[y][x], c2, 1)) {
-                     x++;
-                  }  
-               }
-               else {
-                  while (!(equal(image[y][x-1], c2, 1) || equal(image[y][x-1], c, 10))) {
-                     x--;
-                  }  
-                  x++;
-               }
-               while (true) {
-                  if (!(equal(image[y-1][x], c2, 1) || equal(image[y-1][x], c, 10))) {
-                     y--;
-                  }   
-                  else if (!(equal(image[y][x+1], c2, 1) || equal(image[y][x+1], c, 10))) {
-                     x++;
-                  }
-                  else {
-                     point[0] = new point(x, y);
-                     break;
-                  }
-               }
-               
-               if (!equal(image[y][x], c3, 5)) {
-                  point temp = hackDot(image, minX, maxX, minY, maxY, c, x, y);
-                  if ((temp.x != 0) && (temp.y != 0)) {
-                     return temp;
-                  }
-               }
-               
-               int max = x;
-               int y2 = y;
-               int count = 0;
-               while (true) {
-                  if (!(equal(image[y][x+1], c2, 1) || equal(image[y][x+1], c, 10))) {
-                     x++;
-                     count = 0;
-                     if (x > max) {
-                        max = x;
-                        y2 = y;
-                     }
-                  }   
-                  else if (!(equal(image[y+1][x], c2, 1) || equal(image[y+1][x], c, 10))) {
-                     y++;
-                     count++;
-                     if (count > 1) {
-                        point[1] = new point(max, y2);
-                        break; 
-                     }
-                  }
-                  else {
-                     point[1] = new point(max, y2);
-                     break;
-                  }
-               } 
-               return midpoint(point);
-               */
             }
          }
-      }
-         
+      }   
       return new point(0, 0);
    }
    private static point hackDot(Color[][] image, int minX, int maxX, int minY, int maxY, Color c, int x, int y) {
